@@ -46,33 +46,6 @@ function startContentScript() {
     alert(numberOfFiles); // This will log the number, e.g., 4
 
 
-
-    /*
-       // Selecciona todos los elementos <tr> que tienen un atributo data-file
-      const trElements = document.querySelectorAll('tr[data-file]');
-    
-       alert('Descargamos '+trElements[0].getAttribute('data-file'));
-    
-    
-       // Inicializa un array para guardar los objetos con los datos de cada elemento <tr>
-       const dataAttributes = [];
-     
-       // Itera sobre la NodeList de elementos <tr>
-       trElements.forEach(tr => {
-         // Obtiene el valor del atributo data-file
-         const dataFile = tr.getAttribute('data-file');
-     
-         // Obtiene el valor del atributo data-path
-         const dataPath = tr.getAttribute('data-path');
-     
-         // Crea un objeto con ambos valores y lo agrega al array
-         dataAttributes.push({ file: dataFile, path: dataPath });
-       });
-       alert('Descargamos '+trElements.length);
-    
-       chrome.runtime.sendMessage({ action: 'scrapedData', inputValue, dataAttributes });
-      */
-
     // Select only the first <tr> element with 'data-file' attribute
     const trElement = document.querySelector('tr[data-file]');
 
